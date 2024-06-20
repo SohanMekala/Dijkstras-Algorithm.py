@@ -1,18 +1,26 @@
-nodes = ['A', 'B', 'C', 'D', 'E']
+nodes = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 edges = {
-    ('A', 'B') : 4,
-    ('A', 'C') : 2,
-    ('B', 'C') : 1,
-    ('B', 'D') : 2,
+    ('A', 'C') : 3,
+    ('A', 'F') : 2,
+    ('C', 'F') : 2,
+    ('F', 'E') : 3,
+    ('C', 'E') : 1,
+    ('E', 'B') : 2,
+    ('B', 'F') : 6,
     ('C', 'D') : 4,
-    ('C', 'E') : 5,
-    ('E', 'D') : 1,
+    ('F', 'G') : 5,
+    ('B', 'D') : 1,
+    ('B', 'G') : 2,
 }
 
 start = 'A'
-end = 'D'
+end = 'B'
 
+'''
+1. constantly update estimates
+2. choose next vertex
+'''
 
 def minimum(dict):
     min_key = list(dict.keys())[0]
